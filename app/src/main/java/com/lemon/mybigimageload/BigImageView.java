@@ -200,6 +200,7 @@ public class BigImageView extends View implements GestureDetector.OnGestureListe
         // 以下 4个参数 都是相对初始值来说
         // minX : x  相对于参数1来说   即向左 最大滑动距离   [用于界定 左侧边界 ]   maxX  : 相对于参数1来说   向右最大滑动距离  [右侧滑动边界]      0 左右不可滑动
         // minY : Y 相对于参数2 来说  向上最大滑动距离      maxY ：相对于参数2 来说 向下最大滑动距离
+        // mRect.bottom 为   图片根据view高度缩放后   一次展示缩放后的图片高度
         scroller.fling(0, mRect.top, 0, (int) -y, 0, 0, 0, imageHeight - (int) (viewHeight / mScale));
         return false;
     }
